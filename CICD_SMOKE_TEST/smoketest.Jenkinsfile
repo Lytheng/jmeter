@@ -30,12 +30,6 @@ pipeline {
     
     post {
         success {
-            sh '''
-                rm -f index.html
-                cp ${WORKSPACE}/${SMOKE_TEST_DIR}/output/${VERSION}.html index.html
-                find . ! -path "./CICD_SMOKE_TEST/*" ! -name "index.html" ! -name "CICD_SMOKE_TEST" -delete
-            '''
-
             publishHTML ([
                 allowMissing: false, 
                 alwaysLinkToLastBuild: false, icon: '', 
