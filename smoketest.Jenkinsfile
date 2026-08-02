@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     environment {
-        SMOKE_TEST_DIR = "CICD_CINEMA_PREPROD_SMOKETEST"
+        SMOKE_TEST_DIR = "jmeter"
         DOCKER_WORK_DIR     = "/regression-test/scripts"
     }
 
