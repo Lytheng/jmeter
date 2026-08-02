@@ -32,7 +32,8 @@ pipeline {
         success {
             publishHTML ([
                 allowMissing: false, 
-                alwaysLinkToLastBuild: false, icon: '', 
+                alwaysLinkToLastBuild: false, 
+                icon: '', 
                 keepAll: false, 
                 reportDir: 'CICD_SMOKE_TEST/scripts', 
                 reportFiles: 'index.html', 
