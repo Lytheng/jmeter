@@ -1,6 +1,11 @@
 pipeline {
     agent any
 
+    environment {
+        SMOKE_TEST_DIR = "CICD_CINEMA_PREPROD_SMOKETEST"
+        DOCKER_WORK_DIR     = "/regression-test/scripts"
+    }
+
     stages {
         stage('Build') {
             steps {
@@ -10,6 +15,10 @@ pipeline {
         stage('Test') {
             steps {
                 echo 'Testing the application...'
+                script {
+                    // make runlocal.py executable (Only for script used in custom docker --entrypoint)
+                    sh 'chmod o+x ${SMOKE_TEST_DIR}/scripts/runlocal.py'
+                }
             }
         }
         stage('Deploy') {
