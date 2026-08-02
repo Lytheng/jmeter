@@ -29,6 +29,17 @@ pipeline {
     }
     
     post {
+        success {
+            publishHTML ([
+                allowMissing: false, 
+                alwaysLinkToLastBuild: false, icon: '', 
+                keepAll: false, 
+                reportDir: 'CICD_SMOKE_TEST/scripts', 
+                reportFiles: 'index.html', 
+                reportName: 'HTML Report', reportTitles: '', 
+                useWrapperFileDirectly: true
+            ])
+        }
         always {
             cleanWs()
         }
