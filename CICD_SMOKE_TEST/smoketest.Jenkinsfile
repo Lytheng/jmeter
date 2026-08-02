@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     environment {
-        SMOKE_TEST_DIR = "jmeter"
+        SMOKE_TEST_DIR = "CICD_SMOKE_TEST"
         DOCKER_WORK_DIR     = "/regression-test/scripts"
     }
 
@@ -17,7 +17,7 @@ pipeline {
                 echo 'Testing the application...'
                 script {
                     // make runlocal.py executable (Only for script used in custom docker --entrypoint)
-                    sh 'chmod o+x scripts/runlocal.py'
+                    sh 'chmod o+x ${SMOKE_TEST_DIR}/scripts/runlocal.py'
                 }
             }
         }

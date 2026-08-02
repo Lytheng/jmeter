@@ -20,7 +20,7 @@ def main() -> int:
                     pass
 
     jm = "F:/apache-jmeter-5.6.3/bin/jmeter.bat"
-    jmx = "F:/jmeter/free_api.jmx"
+    jmx = "F:/jmeter/CICD_SMOKE_TEST/free_api.jmx"
     subprocess.run([
         "cmd", "/c", jm, "-n", "-t", jmx,
     ], check=False)

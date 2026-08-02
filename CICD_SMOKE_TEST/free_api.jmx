@@ -46,7 +46,7 @@
             <connectTime>true</connectTime>
           </value>
         </objProp>
-        <stringProp name="filename">F:\jmeter\scripts\free_api.jtl</stringProp>
+        <stringProp name="filename">F:\jmeter\CICD_SMOKE_TEST\scripts\free_api.jtl</stringProp>
       </ResultCollector>
       <hashTree/>
       <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Thread Group" enabled="true">
