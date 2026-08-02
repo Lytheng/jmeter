@@ -41,8 +41,5 @@ pipeline {
                 useWrapperFileDirectly: true
             ])
         }
-        always {
-            cleanWs()
-        }
     }
 }
