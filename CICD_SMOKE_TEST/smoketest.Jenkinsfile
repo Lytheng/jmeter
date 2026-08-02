@@ -41,6 +41,9 @@ pipeline {
                 reportTitles: '', 
                 useWrapperFileDirectly: true
             ])
+            /* always {
+                cleanWs()
+            } */
         }
     }
 }
