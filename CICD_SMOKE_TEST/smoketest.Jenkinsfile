@@ -36,7 +36,8 @@ pipeline {
                 keepAll: false, 
                 reportDir: 'CICD_SMOKE_TEST/scripts', 
                 reportFiles: 'index.html', 
-                reportName: 'HTML Report', reportTitles: '', 
+                reportName: 'HTML Report', 
+                reportTitles: '', 
                 useWrapperFileDirectly: true
             ])
         }
